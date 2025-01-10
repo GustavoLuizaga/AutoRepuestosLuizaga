@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscar Productos</title>
+
+</head>
+<body>
+<div class="bg-fuchsia-500">
+    <h1>List products all</h1>
+    {% for product in products %}
+        <li> {{ product.name }} </li>
+    {% endfor %}
+</div>
+
+<div class="bg-amber-950">
+    <h1>List Products search</h1>
+    <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="searchProducts()"/>
+    <ul id="productList">
+        <!-- Los productos se mostrarán aquí dinámicamente -->
+    </ul>
+</div>
+
+<script src="{% static 'js/search_product.js' %}"></script>
+</body>
+</html>
+                                                                
