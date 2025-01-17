@@ -2,3 +2,6 @@
 .idea
 __pycache__/
 search_products/migrations
+node_modules
+static/CACHE
+static/src/output.css
